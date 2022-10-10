@@ -1,0 +1,77 @@
+.addUsersGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.itemGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 50%);
+  grid-gap: 10px;
+  padding: 1% 5%;
+  margin: 2% auto;
+}
+
+.item3 {
+  grid-column: 3/1;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.itemGrid label {
+  font-weight: 700;
+  font-size: large;
+}
+
+.itemGrid input {
+  border-radius: 5px;
+  border: 1px solid #0401118c;
+  padding: 5%;
+  width: 160%;
+  font-size: 15px;
+}
+
+@media (max-width: 786px) {
+  .addUsersGrid {
+    grid-template-columns: repeat(1, 70%);
+  }
+  .item3 {
+    grid-column: 2/1;
+    text-align: left;
+  }
+  .itemGrid {
+    grid-template-columns: 1fr;
+    padding: 0%;
+    grid-gap: 0px;
+  }
+  label {
+    display: block;
+    width: 5rem;
+    margin: 2%;
+
+    /* border: 2px solid; */
+  }
+  input {
+    margin: 2%;
+  }
+  .itemGrid label {
+    font-weight: 600;
+    font-size: 15px;
+    margin: 3%;
+  }
+  .itemGrid input {
+    width: 120%;
+    height: 0.5rem;
+    font-size: 15px;
+  }
+  .item3 {
+    padding: 0%;
+    /* border: 1px solid; */
+    margin: 0%;
+  }
+  .AddUser{
+    font-size: 15px;
+    padding: 3% 4.5%;
+  }
+}

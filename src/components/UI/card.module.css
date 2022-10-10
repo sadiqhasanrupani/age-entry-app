@@ -1,0 +1,20 @@
+.card {
+  max-width: 95%;
+  width: 65%;
+  box-shadow: 1px 1px 15px 9px #06061a54;
+  border-radius: 12px;
+  padding: 2%;
+  margin: 2% auto;
+  background: linear-gradient(to top left,#f8edeb,#f8edeb);
+  /* background: #; */
+  backdrop-filter: blur(50px);
+}
+
+@media (max-width: 786px) {
+  .card {
+    max-width: 95%;
+    width: 92%;
+    margin: 1%;
+    padding: 3%;
+  }
+}
