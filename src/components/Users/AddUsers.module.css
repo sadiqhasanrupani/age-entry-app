@@ -2,6 +2,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 50%);
+  grid-gap: 5px;
 }
 
 .itemGrid {
@@ -9,14 +10,12 @@
   display: grid;
   grid-template-columns: repeat(1, 50%);
   grid-gap: 10px;
-  padding: 1% 5%;
-  margin: 2% auto;
+  padding: 0%;
+  margin: 0%;
 }
 
 .item3 {
   grid-column: 3/1;
-  text-align: center;
-  margin-top: 2%;
 }
 
 .itemGrid label {
@@ -32,6 +31,47 @@
   font-size: 15px;
 }
 
+.itemGrid input:focus {
+  border: 2px solid #9381ff;
+  outline: none;
+}
+
+.itemGrid label,
+.input {
+  padding: 5px 10px;
+}
+
+.AddUser {
+  margin: 1%;
+}
+
+.item1.itemGrid.isValid input {
+  border: 2px solid #e63946;
+  animation: invalid 0.5s ease-in-out 0.5s 2;
+}
+.item1.itemGrid.isValid input::placeholder {
+  color: #e63946;
+  animation: invalid 0.5s ease-in-out 0.5s 2;
+}
+
+.item2.itemGrid.isValid input {
+  border: 2px solid #e63946;
+  animation: invalid 0.5s ease-in-out 0.5s 2;
+}
+.item2.itemGrid.isValid input::placeholder {
+  color: #e63946;
+  animation: invalid 0.5s ease-in-out 0.5s 2;
+}
+
+@keyframes invalid {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
 @media (max-width: 786px) {
   .addUsersGrid {
     grid-template-columns: repeat(1, 70%);
@@ -45,33 +85,44 @@
     padding: 0%;
     grid-gap: 0px;
   }
-  label {
-    display: block;
-    width: 5rem;
-    margin: 2%;
-
-    /* border: 2px solid; */
-  }
   input {
-    margin: 2%;
+    margin: 1%;
   }
   .itemGrid label {
+    display: block;
+    width: 5rem;
     font-weight: 600;
     font-size: 15px;
-    margin: 3%;
+    margin: 2%;
   }
   .itemGrid input {
     width: 120%;
     height: 0.5rem;
     font-size: 15px;
   }
+  .itemGrid label,
+  .input {
+    padding: 0px 5px;
+  }
   .item3 {
     padding: 0%;
     /* border: 1px solid; */
+    /* margin: 2%; */
+  }
+  .AddUser {
+    font-size: 15px;
+    font-weight: 800;
+    padding: 3.5% 5.5%;
+    margin: 3%;
+  }
+}
+
+@media (min-width: 1450px) and (max-width: 1960px) {
+  .itemGrid {
+    padding: 0%;
     margin: 0%;
   }
-  .AddUser{
-    font-size: 15px;
-    padding: 3% 4.5%;
+  .AddUser {
+    margin: 1%;
   }
 }
