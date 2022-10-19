@@ -1,0 +1,22 @@
+.PrimaryBtn {
+  background: transparent;
+  padding: 1%;
+  margin: 1%;
+  font-size: 15px;
+  font-weight: 700;
+  color: #03140ae4;
+  border: 2px solid #5094fea0;
+  border-radius: 8px;
+  background-color: #78adfea0;
+  cursor: pointer;
+  transition: all ease-in-out 0.4s;
+}
+
+.PrimaryBtn:hover {
+  background-color: #0263faa0;
+  color: white;
+}
+
+.PrimaryBtn:focus {
+  outline: none;
+}

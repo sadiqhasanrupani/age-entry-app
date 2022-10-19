@@ -1,0 +1,57 @@
+.modelBackground  {
+  margin-top: -1.5em;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0 0 0 / .4);
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupModel {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  /* padding: 25px; */
+}
+
+.popupModel .header {
+  /* border: 4px solid; */
+  text-align: center;
+  /* margin: 0.5% auto; */
+}
+
+.crossBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.crossBtn button {
+  font-size: 25px;
+  /* border: none; */
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.popupModel .body {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.popupModel .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupModel .footer .btn {
+  padding: 2% 5%;
+  margin: 2%;
+  font-size: 20px;
+}

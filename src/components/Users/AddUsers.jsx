@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 
 // UI Components
-import Card from "../UI/card";
-import AddBtn from "../UI/AddBtn";
+import Card from "../UI/Card/card";
+import AddBtn from "../UI/Buttons/AddBtn";
 
 // Css Class
 import style from "./AddUsers.module.css";
@@ -48,6 +48,8 @@ const AddUsers = (props) => {
 
     setUserEnteredData("");
     setAgeEnteredData("");
+
+    props.setIsModel(true);
   };
 
   const usernameChangeHandler = (e) => {
@@ -70,51 +72,53 @@ const AddUsers = (props) => {
   };
 
   return (
-    <Card>
-      <form onSubmit={AddUserDataHandler}>
-        <div className={style.addUsersGrid}>
-          <div
-            className={`${style.item1} ${style.itemGrid} ${
-              !usernameValid /* Default= true */ ? style.isValid : ""
-            }`}
-          >
-            <label htmlFor="userNm">Username</label>
-            <div className={`${style.input}`}>
-              <input
-                type="text"
-                id="userNm"
-                name="name"
-                value={userEnteredData}
-                placeholder="Enter you name"
-                onChange={usernameChangeHandler}
-              />
+    <>
+      <Card>
+        <form onSubmit={AddUserDataHandler}>
+          <div className={style.addUsersGrid}>
+            <div
+              className={`${style.item1} ${style.itemGrid} ${
+                !usernameValid /* Default= true */ ? style.isValid : ""
+              }`}
+            >
+              <label htmlFor="userNm">Username</label>
+              <div className={`${style.input}`}>
+                <input
+                  type="text"
+                  id="userNm"
+                  name="name"
+                  value={userEnteredData}
+                  placeholder="Enter you name"
+                  onChange={usernameChangeHandler}
+                />
+              </div>
+            </div>
+            <div
+              className={`${style.item2} ${style.itemGrid} ${
+                !ageValid /* Default= true */ ? style.isValid : ""
+              }`}
+            >
+              <label htmlFor="age">Age</label>
+              <div className={style.input}>
+                <input
+                  type="text"
+                  name="age"
+                  id="age"
+                  value={ageEnteredData}
+                  placeholder="Enter your Age"
+                  onChange={ageChangeHandler}
+                />
+              </div>
+            </div>
+            <div className={style.item3}>
+              <AddBtn type="submit" className={style.AddUser}>
+                Add User
+              </AddBtn>
             </div>
           </div>
-          <div
-            className={`${style.item2} ${style.itemGrid} ${
-              !ageValid /* Default= true */ ? style.isValid : ""
-            }`}
-          >
-            <label htmlFor="age">Age</label>
-            <div className={style.input}>
-              <input
-                type="text"
-                name="age"
-                id="age"
-                value={ageEnteredData}
-                placeholder="Enter your Age"
-                onChange={ageChangeHandler}
-              />
-            </div>
-          </div>
-          <div className={style.item3}>
-            <AddBtn type="submit" className={style.AddUser}>
-              Add User
-            </AddBtn>
-          </div>
-        </div>
-      </form>
-    </Card>
+        </form>
+      </Card>
+    </>
   );
 };
 

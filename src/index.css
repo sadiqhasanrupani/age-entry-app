@@ -3,10 +3,19 @@
   src: url(fonts/MontserratPoppins/Poppins/Poppins-Medium.ttf);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
-  background-color: #f5f6f8;
+  /* background-color: #f5f6f8; */
   font-family: poppins-medium;
   background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
     url("https://images.unsplash.com/photo-1604147706283-d7119b5b822c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
   color: #080818c4;
+}
+
+body{ 
+  margin: 0;
+  padding: 0;
 }

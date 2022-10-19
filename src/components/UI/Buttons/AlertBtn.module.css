@@ -1,0 +1,22 @@
+.AlertBtn {
+  background: transparent;
+  padding: 1%;
+  margin: 1%;
+  font-size: 15px;
+  font-weight: 700;
+  color: #03140ae4;
+  border: 2px solid #ff51516d;
+  border-radius: 8px;
+  background-color: #f9838342;
+  cursor: pointer;
+  transition: all ease-in-out 0.4s;
+}
+
+.AlertBtn:hover {
+  background-color: #fa0202a0;
+  color: white;
+}
+
+.AlertBtn:focus {
+  outline: none;
+}

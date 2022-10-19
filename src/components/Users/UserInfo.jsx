@@ -1,13 +1,13 @@
 import React from "react";
 
-import Card from "../UI/card";
+import Card from "../UI/Card/card";
 
 import styles from "./UserInfo.module.css";
 
 const UserInfo = (props) => {
   return (
     <div className={styles.container}>
-      {props.userInfo.map((user) => {
+      {props.isOpen && props.userInfo.map((user) => {
         return (
           <div key={user.key}>
             <Card className={styles.userList}>

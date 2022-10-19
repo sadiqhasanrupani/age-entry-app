@@ -1,16 +1,19 @@
 .AddBtn {
   background: transparent;
   padding: 1.2% 3% 1.2% 3%;
-  margin: 2.3%;
+  margin: 1.3%;
   font-size: 15px;
   font-weight: 700;
   color: #03140ae4;
-  border: 2px solid #9ef01a;
+  border: 1px solid #1af01d;
   border-radius: 10px;
-  background-color: #9ef01a;
+  background-color: #9ef01ad7;
   cursor: pointer;
   transition: all ease-in-out 0.4s;
+  box-sizing: border-box;
 }
-.AddBtn:hover {
+
+.AddBtn:is(:hover,:focus) {
   background-color: #abff4f;
+  outline: 1px solid #1af01d;
 }
