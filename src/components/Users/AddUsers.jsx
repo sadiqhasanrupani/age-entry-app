@@ -26,22 +26,16 @@ const AddUsers = (props) => {
       setUsernameValid(false);
     }
 
-    if (ageEnteredData.trim().length === 0) {
+    if (
+      ageEnteredData.trim().length === 0 ||
+      +ageEnteredData < 1 ||
+      isNaN(+ageEnteredData) === true
+    ) {
       setAgeValid(false);
+      setAgeEnteredData("");
       return;
     }
 
-    if (+ageEnteredData < 1) {
-      setAgeValid(false);
-      return;
-    }
-    
-
-    if (isNaN(+ageEnteredData) === true) {
-      setAgeValid(false);
-      return;
-    }
-    
     setCount((count += 1));
 
     const userObj = {
