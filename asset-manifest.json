@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/age-entry-app/static/css/main.b577d494.css",
+    "main.js": "/age-entry-app/static/js/main.56946312.js",
+    "static/media/Montserrat-Bold.ttf": "/age-entry-app/static/media/Montserrat-Bold.2c155811b35513d5beaa.ttf",
+    "static/media/Poppins-Medium.ttf": "/age-entry-app/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
+    "index.html": "/age-entry-app/index.html",
+    "main.b577d494.css.map": "/age-entry-app/static/css/main.b577d494.css.map",
+    "main.56946312.js.map": "/age-entry-app/static/js/main.56946312.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b577d494.css",
+    "static/js/main.56946312.js"
+  ]
+}
