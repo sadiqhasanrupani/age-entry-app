@@ -1,13 +1,13 @@
 .card {
   max-width: 95%;
   width: 65%;
-  box-shadow: 1px 1px 15px 9px #06061a54;
   border-radius: 12px;
   padding: 2%;
   margin: 2% auto;
-  background: linear-gradient(to top left,#f8edeb,#f8edeb);
+  background: linear-gradient(to top left, #f8edeb, #f8edeb);
   /* background: #; */
   backdrop-filter: blur(px);
+  box-shadow: #32325d40 0px 50px 100px -20px, #0000004d 0px 30px 60px -30px, #0a254059 0px -2px 6px 0px inset;
 }
 
 @media (max-width: 786px) {
