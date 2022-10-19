@@ -1,6 +1,28 @@
+@font-face {
+  font-family: header;
+  src: url(../../fonts/MontserratPoppins/Montserrat/static/Montserrat-Bold.ttf);
+}
+
 .userList {
   margin: 2% auto;
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.content {
+  text-align: center;
+  font-size: 180%;
+  color: #b12c2cd8;
+  font-family: header;
+}
+@media (max-width: 768px) {
+  .container {
+    margin: 4% auto;
+  }
+  .content {
+    font-size: large;
+  }
+  .header2 {
+    font-size: large;
+  }
 }

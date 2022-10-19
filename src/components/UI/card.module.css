@@ -7,7 +7,7 @@
   margin: 2% auto;
   background: linear-gradient(to top left,#f8edeb,#f8edeb);
   /* background: #; */
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(px);
 }
 
 @media (max-width: 786px) {

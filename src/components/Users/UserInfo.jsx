@@ -6,7 +6,7 @@ import styles from "./UserInfo.module.css";
 
 const UserInfo = (props) => {
   return (
-    <div>
+    <div className={styles.container}>
       {props.userInfo.map((user) => {
         return (
           <div key={user.key}>
