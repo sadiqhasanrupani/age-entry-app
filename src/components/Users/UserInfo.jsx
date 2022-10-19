@@ -12,9 +12,9 @@ const UserInfo = (props) => {
           <div key={user.key}>
             <Card className={styles.userList}>
               <div>
-                User's name: <b>"{user.userName}"</b>
+                User's name: <b>"{user.userName.trim()}"</b>
                 <br />
-                User's age: <b>"{user.age}"</b>
+                User's age: <b>"{user.age.trim()}"</b>
               </div>
             </Card>
           </div>

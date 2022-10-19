@@ -35,6 +35,13 @@ const AddUsers = (props) => {
       setAgeValid(false);
       return;
     }
+    
+
+    if (isNaN(+ageEnteredData) === true) {
+      setAgeValid(false);
+      return;
+    }
+    
     setCount((count += 1));
 
     const userObj = {
