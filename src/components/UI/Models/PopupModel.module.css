@@ -55,3 +55,9 @@
   margin: 2%;
   font-size: 20px;
 }
+
+@media (min-width: 1450px) and (max-width: 1960px) {
+  .modelBackground {
+    margin-top: -2%;
+  }
+}
