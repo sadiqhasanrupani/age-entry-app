@@ -38,7 +38,7 @@ const PopupModel = (props) => {
             <AlertBtn className={styles.btn} onClick={closeHandler}>
               Cancel
             </AlertBtn>
-            <PrimaryBtn type={'submit'} className={styles.btn} onFocus={continueHandler}>
+            <PrimaryBtn type={'submit'} className={styles.btn} onClick={continueHandler}>
               Continue
             </PrimaryBtn>
           </footer>
