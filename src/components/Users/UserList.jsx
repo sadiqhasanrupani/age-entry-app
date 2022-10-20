@@ -24,7 +24,7 @@ const UserList = (props) => {
         <h2 className={styles.header2}>User Data</h2>
       </div>
       <div>{content}</div>
-      <UserInfo isOpen={props.isOpen} userInfo={props.userInfo} />
+      <UserInfo userInfo={props.userInfo} />
     </Card>
   );
 };

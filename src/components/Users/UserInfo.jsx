@@ -7,14 +7,14 @@ import styles from "./UserInfo.module.css";
 const UserInfo = (props) => {
   return (
     <div className={styles.container}>
-      {props.isOpen && props.userInfo.map((user) => {
+      {props.userInfo.map((user) => {
         return (
           <div key={user.key}>
             <Card className={styles.userList}>
               <div>
-                User's name: <b>"{user.userName.trim()}"</b>
+                User's name: <b>{user.userName.trim()}</b>
                 <br />
-                User's age: <b>"{user.age.trim()}"</b>
+                User's age: <b>{user.age.trim()}</b>
               </div>
             </Card>
           </div>

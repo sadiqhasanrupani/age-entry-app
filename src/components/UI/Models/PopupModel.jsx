@@ -14,8 +14,10 @@ const PopupModel = (props) => {
   };
 
   const continueHandler = () => {
-    props.openHandler(true);
+    // props.openHandler(true);
     props.closeModel(false);
+    let getData = props.onPopupModel;
+    props.onGetData(getData);
   };
 
   return (

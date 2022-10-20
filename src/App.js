@@ -12,11 +12,14 @@ import "./App.css";
 
 const App = () => {
   const [userData, setUserData] = useState([]);
-
+  const [userInfoData, setUserInfoData] = useState({});
   const [isModel, setIsModel] = useState(false);
-  const[isOpen, setIsOpen] = useState(false);
+  const [againUserData, setAgainUserData] = useState([]);
 
   const getUserDataHandler = (userInfo) => {
+
+    setUserInfoData(userInfo);
+
     setUserData((prevUserData) => {
       const updateUserData = [...prevUserData];
       updateUserData.push({ ...userInfo });
@@ -24,17 +27,35 @@ const App = () => {
     });
   };
 
+  // const getUserDataHandler = (userInfo) => {
+  //   setUserInfoData(userInfo);
+  // };
+
+  const displayDataHandler = () => {
+    setAgainUserData((prevUserData) => {
+      const updateUserData = [...prevUserData];
+      updateUserData.push({ ...userInfoData });
+      return updateUserData;
+    });
+  };
+
+  
+
+
   return (
     <div>
-      {isModel && <PopupModel closeModel={setIsModel} openHandler={setIsOpen} />}
-      <div>
-        <AddUsers onAddUser={getUserDataHandler} 
-        setIsModel={setIsModel}
+      {isModel && (
+        <PopupModel
+          closeModel={setIsModel}
+          onPopupModel={userData}
+          onGetData={displayDataHandler}
         />
+      )}
+      <div>
+        <AddUsers onAddUser={getUserDataHandler} setIsModel={setIsModel} />
       </div>
       <div>
-        <UserList userInfo={userData} isOpen={isOpen}
-        />
+        <UserList userInfo={againUserData} />
       </div>
     </div>
   );
