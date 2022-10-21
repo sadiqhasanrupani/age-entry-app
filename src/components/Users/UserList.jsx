@@ -1,5 +1,5 @@
 // React component
-import React,{ useState } from "react";
+import React,{ useState, Fragment } from "react";
 
 // other components
 import UserInfo from "./UserInfo";
@@ -19,13 +19,15 @@ const UserList = (props) => {
     content = <p className={styles.content}>Please Enter the Data </p>;
   }
   return (
-    <Card className={styles.container}>
-      <div>
-        <h2 className={styles.header2}>User Data</h2>
-      </div>
-      <div>{content}</div>
-      <UserInfo userInfo={props.userInfo} />
-    </Card>
+    <Fragment>
+      <Card className={styles.container}>
+        <div>
+          <h2 className={styles.header2}>User Data</h2>
+        </div>
+        <div>{content}</div>
+        <UserInfo userInfo={props.userInfo} />
+      </Card>
+    </Fragment>
   );
 };
 

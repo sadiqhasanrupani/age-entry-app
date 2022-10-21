@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import Card from "../UI/Card/card";
 
@@ -6,7 +6,7 @@ import styles from "./UserInfo.module.css";
 
 const UserInfo = (props) => {
   return (
-    <div className={styles.container}>
+    <Fragment className={styles.container}>
       {props.userInfo.map((user) => {
         return (
           <div key={user.key}>
@@ -20,7 +20,7 @@ const UserInfo = (props) => {
           </div>
         );
       })}
-    </div>
+    </Fragment>
   );
 };
 
