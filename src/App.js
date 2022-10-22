@@ -17,7 +17,6 @@ const App = () => {
   const [againUserData, setAgainUserData] = useState([]);
 
   const getUserDataHandler = (userInfo) => {
-
     setUserInfoData(userInfo);
 
     setUserData((prevUserData) => {
@@ -38,10 +37,6 @@ const App = () => {
       return updateUserData;
     });
   };
-
-  
-
-
   return (
     <div>
       {isModel && (
